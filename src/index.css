@@ -1,14 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&display=swap');
+
+@font-face {
+  font-family: arialNarrow;
+  src: url(./Fonts/arialnarrow.ttf);
+}
+
 body {
   margin: 0;
-  font-family: "Arial Narrow", sans-serif;
+  font-family: 'Arial Narrow', arialNarrow;
+  font-stretch: condensed;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #85C803;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
 }
 
 p {
@@ -155,8 +158,10 @@ a {
 }
 
 .color {
+  border: none;
+  box-shadow: 0px 0px 2px black;
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 20px;
 }
 
 .color:hover {
@@ -165,9 +170,18 @@ a {
 
 /* a:hover {} */
 
+.small {
+  font-size: 20px;
+}
+
 @media only screen and (max-width: 660px) {
   .content {
     flex-direction: column;
     position: relative;
+    gap: 60px;
+  }
+
+  .form {
+    gap: 20px;
   }
 }

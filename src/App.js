@@ -19,8 +19,7 @@ function App() {
 
   useEffect(() => {
     setNormal(window.innerWidth >= 660);
-    if (!normal && (fontSize > 44)) { setFontSize(30); handleSliderChange() }
-  }, [window.innerWidth]);
+  }, [window.innerWidth, normal]);
 
   function setColor(color) {
     document.body.style.backgroundColor = color;
@@ -38,7 +37,7 @@ function App() {
               <input
                 type="range"
                 min={20}
-                max={normal ? 80 : 30}
+                max={normal ? 80 : 36}
                 value={fontSize}
                 onChange={handleSliderChange}
                 className="slider"
@@ -52,6 +51,7 @@ function App() {
               <button className="color" onClick={() => setColor("#e1c903")} style={{ backgroundColor: "#e1c903" }} />
             </div>
             <div className="list">
+              <p className="brat small">follow me!</p>
               <a href="https://github.com/ZoeyZoella" target="blank"><FaGithub /></a>
               <a href="https://www.instagram.com/zhaoli_xcx/" target="blank"><FaInstagram /></a>
             </div>

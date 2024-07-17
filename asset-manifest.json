@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/brat-generator/static/css/main.3681465b.css",
+    "main.js": "/brat-generator/static/js/main.fc9790d2.js",
+    "static/js/453.f1afb4c0.chunk.js": "/brat-generator/static/js/453.f1afb4c0.chunk.js",
+    "index.html": "/brat-generator/index.html",
+    "main.3681465b.css.map": "/brat-generator/static/css/main.3681465b.css.map",
+    "main.fc9790d2.js.map": "/brat-generator/static/js/main.fc9790d2.js.map",
+    "453.f1afb4c0.chunk.js.map": "/brat-generator/static/js/453.f1afb4c0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3681465b.css",
+    "static/js/main.fc9790d2.js"
+  ]
+}

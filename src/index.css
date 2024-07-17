@@ -130,7 +130,7 @@ input[type="range"]::-moz-range-thumb {
   align-items: center;
   justify-content: center;
   display: flex;
-  gap: 40px;
+  gap: 80px;
 }
 
 .center {
@@ -178,7 +178,6 @@ a {
   .content {
     flex-direction: column;
     position: relative;
-    gap: 60px;
   }
 
   .form {

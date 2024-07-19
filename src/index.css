@@ -172,6 +172,8 @@ a {
 
 .small {
   font-size: 20px;
+  max-width: 120px;
+  user-select: auto;
 }
 
 @media only screen and (max-width: 660px) {

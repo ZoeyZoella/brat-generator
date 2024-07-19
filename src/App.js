@@ -51,9 +51,9 @@ function App() {
               <button className="color" onClick={() => setColor("#e1c903")} style={{ backgroundColor: "#e1c903" }} />
             </div>
             <div className="list">
-              <p className="brat small">follow me!</p>
               <a href="https://github.com/ZoeyZoella" target="blank"><FaGithub /></a>
               <a href="https://www.instagram.com/zhaoli_xcx/" target="blank"><FaInstagram /></a>
+              <p className="brat small">tag me on insta! @zhaoli_xcx</p>
             </div>
           </div>
           <p className={"label brat font-" + (isSingleWord(caption) ? "center" : "justify")} style={{ fontSize: `${fontSize}px` }}>

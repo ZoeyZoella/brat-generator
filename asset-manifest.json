@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/brat-generator/static/css/main.53c35899.css",
-    "main.js": "/brat-generator/static/js/main.143d2858.js",
+    "main.js": "/brat-generator/static/js/main.5102354b.js",
     "static/js/453.f1afb4c0.chunk.js": "/brat-generator/static/js/453.f1afb4c0.chunk.js",
     "static/media/arialnarrow.ttf": "/brat-generator/static/media/arialnarrow.4cad86aa05f7286be068.ttf",
     "index.html": "/brat-generator/index.html",
     "main.53c35899.css.map": "/brat-generator/static/css/main.53c35899.css.map",
-    "main.143d2858.js.map": "/brat-generator/static/js/main.143d2858.js.map",
+    "main.5102354b.js.map": "/brat-generator/static/js/main.5102354b.js.map",
     "453.f1afb4c0.chunk.js.map": "/brat-generator/static/js/453.f1afb4c0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.53c35899.css",
-    "static/js/main.143d2858.js"
+    "static/js/main.5102354b.js"
   ]
 }

@@ -22,17 +22,58 @@ p {
   background: rgba(255, 255, 255, 0.2);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.3);
   padding: 20px;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
 }
 
 .form {
   display: flex;
   flex-direction: column;
   padding: 40px;
-  gap: 40px;
+  gap: 30px;
+}
+
+.brat-wall {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  display: flex;
+  gap: 10px;
+  width: max-content;
+  z-index: -10;
+}
+
+.brat.muted {
+  opacity: 30%;
+}
+
+.wrapper {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.marquee {
+  /* display: flex;
+  flex-direction: row;
+  gap: 20px; */
+  text-align: justify;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(auto-fill, 180px);
+  overflow-y: hidden;
+  grid-row-gap: .5em;
+  grid-column-gap: 2em;
+}
+
+.marquee p {
+  font-size: 20px;
 }
 
 input[type="text"] {
@@ -120,9 +161,10 @@ input[type="range"]::-moz-range-thumb {
   font-size: clamp(1rem, 10vw, 2rem);
   width: 300px;
   max-width: max(200px, 30%);
+  z-index: 10;
+  position: relative;
+  padding: 40px 30px;
 }
-
-.caption {}
 
 .content {
   padding: 20px;
@@ -130,7 +172,7 @@ input[type="range"]::-moz-range-thumb {
   align-items: center;
   justify-content: center;
   display: flex;
-  gap: 80px;
+  gap: 40px;
 }
 
 .center {
@@ -176,13 +218,62 @@ a {
   user-select: auto;
 }
 
+.flex {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.vertical {
+  flex-direction: column;
+}
+
+.message {
+  max-width: 130px;
+  text-shadow: 0 0 0.05em rgba(0, 0, 0, 1);
+}
+
+input[type="submit"] {
+  padding-block: 10px;
+  font-family: inherit;
+  border-radius: 10px;
+  border: 2px outset #85C803;
+  color: black;
+  font-size: 18px;
+  /* background-color: #9fe80d; */
+}
+
+input[type="submit"]:hover {
+  /* background-color: rgb(145, 212, 10); */
+}
+
+input[type="submit"]:active {
+  /* background-color: #85C803; */
+}
+
+@media only screen and (max-width: 1000px) {
+  .marquee {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
 @media only screen and (max-width: 660px) {
   .content {
     flex-direction: column;
     position: relative;
+    gap: 10px;
   }
 
   .form {
     gap: 20px;
+  }
+
+  .marquee p {
+    font-size: 20px;
+  }
+
+  .marquee {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(auto-fill, 150px);
   }
 }

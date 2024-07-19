@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/brat-generator/static/css/main.5994348c.css",
-    "main.js": "/brat-generator/static/js/main.fdf6377c.js",
+    "main.css": "/brat-generator/static/css/main.78e5c05b.css",
+    "main.js": "/brat-generator/static/js/main.0d69bcee.js",
     "static/js/453.f1afb4c0.chunk.js": "/brat-generator/static/js/453.f1afb4c0.chunk.js",
     "static/media/arialnarrow.ttf": "/brat-generator/static/media/arialnarrow.4cad86aa05f7286be068.ttf",
     "index.html": "/brat-generator/index.html",
-    "main.5994348c.css.map": "/brat-generator/static/css/main.5994348c.css.map",
-    "main.fdf6377c.js.map": "/brat-generator/static/js/main.fdf6377c.js.map",
+    "main.78e5c05b.css.map": "/brat-generator/static/css/main.78e5c05b.css.map",
+    "main.0d69bcee.js.map": "/brat-generator/static/js/main.0d69bcee.js.map",
     "453.f1afb4c0.chunk.js.map": "/brat-generator/static/js/453.f1afb4c0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5994348c.css",
-    "static/js/main.fdf6377c.js"
+    "static/css/main.78e5c05b.css",
+    "static/js/main.0d69bcee.js"
   ]
 }

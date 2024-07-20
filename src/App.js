@@ -1,23 +1,32 @@
 import { useEffect, useState } from "react";
 import { FaGithub } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
+import { quantum } from 'ldrs'
 
 function App() {
   const [caption, setCaption] = useState("brat generator and it's the same but there's no word limit on brat green backgrounds so it's not");
   const [fontSize, setFontSize] = useState(Math.min(window.innerWidth / 24, 44));
   const [normal, setNormal] = useState(false);
   const [color, setColor] = useState("#85C803");
-
+  const [unique, setUnique] = useState(null);
   const [bratWall, setBratWall] = useState(null);
   const [loading, setLoading] = useState(true);
+
+  const [uploading, setUploading] = useState(false);
+
+  quantum.register()
 
   const addEntry = (e) => {
     e.preventDefault();
 
+    setUploading(true);
+
     fetch(`${process.env.REACT_APP_SHEETS_URL}?action=addEntry&text=${caption}`)
       .then(response => response.json())
-      .catch(e => { console.log(e) })
+      .catch(e => { })
       .then(d => {
+        setUploading(false);
+        window.location.reload();
       });
   }
 
@@ -32,14 +41,24 @@ function App() {
   }
 
   useEffect(() => {
-    if (!bratWall) fetch(`${process.env.REACT_APP_SHEETS_URL}?action=selectEntries&max=20`)
-      .then(response => response.json())
-      .catch(e => { console.log(e) })
-      .then(d => {
-        setBratWall(d.data.rows);
-        setLoading(false);
-        console.log(JSON.stringify(d.data));
-      });
+    if (!bratWall) {
+      fetch(`${process.env.REACT_APP_SHEETS_URL}?action=selectEntries&max=100`)
+        .then(response => response.json())
+        .catch(e => { })
+        .then(d => {
+          setBratWall(d.data.rows);
+          console.log(d.data.rows);
+          setLoading(false);
+        });
+    }
+    if (!unique) {
+      fetch(`${process.env.REACT_APP_SHEETS_URL}?action=getUniqueCount`)
+        .then(response => response.json())
+        .catch(e => { })
+        .then(d => {
+          setUnique(d.data.rows);
+        });
+    }
   }, []);
 
   useEffect(() => {
@@ -55,8 +74,8 @@ function App() {
     <div className="App">
       <div className="wrapper">
         <div className="marquee">
-          {bratWall && bratWall.map((text) => {
-            return <p className="brat muted">{text}</p>;
+          {bratWall && bratWall.map((text, index) => {
+            return <p className="brat muted" key={index}>{text}</p>;
           })}
         </div>
       </div>
@@ -82,10 +101,11 @@ function App() {
               </div>
             </div>
             <div className="flex">
-              <p className="message">{loading ? "loading brat wall..." : "Submit your message to the brat wall!"}</p>
-              <form className="flex vertical" onSubmit={addEntry}>
-                {loading ? <input type="submit" value="loading..." disabled /> : <input type="submit" value="Submit" />}
-              </form>
+              <p className="message">{loading ? "loading brat wall..." : ("upload to the brat wall!")}<b>{(unique ? ` (${unique} entries)` : "")}</b></p>
+              {loading && <l-quantum size="45" speed="1.75" color="black"></l-quantum>}
+              {!(loading) && <form className="flex vertical" onSubmit={addEntry}>
+                {(uploading ? <input type="submit" value="redload..." disabled /> : <input type="submit" value="submit" />)}
+              </form>}
             </div>
             <div className="flex vertical">
               <div className="list">

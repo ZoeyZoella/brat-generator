@@ -19,12 +19,12 @@ p {
 }
 
 .glass {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.25);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.3);
   padding: 20px;
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(2px);
 }
 
@@ -48,7 +48,7 @@ p {
 }
 
 .brat.muted {
-  opacity: 30%;
+  opacity: 36%;
 }
 
 .wrapper {
@@ -65,15 +65,16 @@ p {
   text-align: justify;
   padding: 20px;
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat(auto-fill, 180px);
+  grid-template-columns: repeat(11, 1fr);
+  grid-template-rows: repeat(auto-fill, 90px);
   overflow-y: hidden;
   grid-row-gap: .5em;
   grid-column-gap: 2em;
 }
 
 .marquee p {
-  font-size: 20px;
+  font-size: 12px;
+  overflow-x: hidden;
 }
 
 input[type="text"] {
@@ -213,15 +214,17 @@ a {
 /* a:hover {} */
 
 .small {
-  font-size: 20px;
+  font-size: 16px;
   max-width: 120px;
   user-select: auto;
+  text-shadow: 0 0 0.05em rgba(0, 0, 0, 1);
 }
 
 .flex {
   display: flex;
   gap: 10px;
   align-items: center;
+  justify-content: center;
 }
 
 .vertical {
@@ -229,8 +232,9 @@ a {
 }
 
 .message {
+  width: fit-content;
   max-width: 130px;
-  text-shadow: 0 0 0.05em rgba(0, 0, 0, 1);
+  /* text-shadow: 0 0 0.05em rgba(0, 0, 0, 1); */
 }
 
 input[type="submit"] {
@@ -239,21 +243,26 @@ input[type="submit"] {
   border-radius: 10px;
   border: 2px outset #85C803;
   color: black;
+  background-color: #bafa39;
   font-size: 18px;
-  /* background-color: #9fe80d; */
 }
 
 input[type="submit"]:hover {
-  /* background-color: rgb(145, 212, 10); */
+  background-color: rgb(168, 239, 26);
 }
 
 input[type="submit"]:active {
-  /* background-color: #85C803; */
+  background-color: #85C803;
 }
 
 @media only screen and (max-width: 1000px) {
   .marquee {
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(auto-fill, 70px);
+  }
+
+  .marquee p {
+    font-size: 12px;
   }
 }
 
@@ -269,11 +278,11 @@ input[type="submit"]:active {
   }
 
   .marquee p {
-    font-size: 20px;
+    font-size: 13px;
   }
 
   .marquee {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(auto-fill, 150px);
+    grid-template-rows: repeat(auto-fill, 70px);
   }
 }

@@ -5,4 +5,4 @@ An expansion of Charli xcx’s BRAT cover art generator, with a brat wall to dis
 - 5 color customizations (normal, deluxe and RGB vinyl variants + Conan Gray Found Heaven theme).
 - **Brat wall** for users to display their creations!
 
-<img width="867" alt="Screenshot 2024-08-17 at 10 13 18 PM" src="https://github.com/user-attachments/assets/cd5b3404-e61f-4bd1-90ef-fd72755ae159">
+<img width="856" alt="Screenshot 2024-08-17 at 10 16 18 PM" src="https://github.com/user-attachments/assets/49db7503-a875-45ec-b7e9-69fb92a04adf">

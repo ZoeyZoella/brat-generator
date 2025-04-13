@@ -1,4 +1,4 @@
-# Brat generator and it's the same but there's no word limit on brat green backgrounds so it's not.
+# (CLOSED) Brat generator and it's the same but there's no word limit on brat green backgrounds so it's not.
 
 An expansion of Charli xcx’s BRAT cover art generator, with a brat wall to display user-submitted messages. Features include:
 - No word limit for all backgrounds.
